@@ -1,0 +1,130 @@
+# Hyprlock Configuration - "The Clean Coral Night"
+# Palette: Coral Red / Sea Green / Obsidian Black
+
+general {
+    disable_loading_bar = true
+    grace = 1
+    hide_cursor = true
+    no_fade_in = false
+}
+
+background {
+    monitor =
+    path = screenshot
+    
+    # --- BLEED CONTROL ---
+    blur_passes = 3           # Reduced for performance and clarity
+    blur_size = 6
+    noise = 0.0117            # Subtle grain, much cleaner than 0.08
+    contrast = 1.0            # Neutral contrast prevents color spill
+    brightness = 0.8          # Brighter background makes text "float" without glow
+    vibrancy = 0.1            # Minimal vibrancy prevents color bleeding
+    vibrancy_darkness = 0.0
+}
+
+# --- DECORATIVE "BRUSHSTROKES" (Ambient Light Leaks) ---
+# Lowered opacity (0.05) to keep colors contained
+
+# Top-Right "Coral Sun" Glow
+shape {
+    monitor =
+    size = 400, 400
+    color = rgba(255, 127, 80, 0.05) # Very faint Coral
+    rounding = -1
+    position = 150, 150
+    halign = right
+    valign = top
+}
+
+# Bottom-Left "Sea Tide" Glow
+shape {
+    monitor =
+    size = 600, 300
+    color = rgba(46, 139, 87, 0.04) # Very faint Sea Green
+    rounding = 120
+    position = -100, -100
+    halign = left
+    valign = bottom
+}
+
+# --- TYPOGRAPHY ---
+
+# HOUR (Focal Point)
+label {
+    monitor =
+    text = cmd[update:1000] echo "$(date +"%H")"
+    color = rgba(255, 255, 255, 0.9)
+    font_size = 180
+    font_family = Syne ExtraBold
+    position = 0, 150
+    halign = center
+    valign = center
+    # Shadow is now dark and tight to prevent "glow" bleeding
+    shadow_passes = 1
+    shadow_size = 3
+    shadow_color = rgba(0, 0, 0, 0.3)
+}
+
+# MINUTES (Sea Green Accent)
+label {
+    monitor =
+    text = cmd[update:1000] echo "$(date +"%M")"
+    color = rgba(32, 178, 170, 0.8) # Sea Green
+    font_size = 75
+    font_family = JetBrains Mono Nerd Font Thin
+    position = 130, 65
+    halign = center
+    valign = center
+}
+
+# DATE (The "Signature")
+label {
+    monitor =
+    text = $DATE
+    color = rgba(255, 127, 80, 0.7) # Coral Red
+    font_size = 18
+    font_family = Playfair Display Italic
+    position = 80, 80
+    halign = left
+    valign = bottom
+}
+
+# --- THE INPUT FIELD ---
+
+input-field {
+    monitor =
+    size = 280, 50
+    outline_thickness = 2
+    dots_size = 0.2
+    dots_spacing = 0.6
+    dots_center = true
+    
+    # Clean Gradient
+    outer_color = rgba(255, 127, 80, 0.5) rgba(32, 178, 170, 0.5) 45deg
+    inner_color = rgba(0, 0, 0, 0.5) # Obsidian Black fill
+    font_color = rgb(255, 255, 255)
+    
+    fade_on_empty = true
+    placeholder_text = <span font_family="Playfair Display" foreground="##ffffff66">Discern Thyself...</span>
+    hide_input = false
+    rounding = 4 # Sharper modern edges
+    
+    check_color = rgba(32, 178, 170, 0.8)
+    fail_color = rgba(255, 127, 80, 0.8)
+    
+    position = 0, -100
+    halign = center
+    valign = center
+}
+
+# STATUS INDICATOR
+label {
+    monitor =
+    text = cmd[update:60000] echo "󰁹 $(cat /sys/class/power_supply/BAT*/capacity 2>/dev/null || echo "100")%"
+    color = rgba(255, 255, 255, 0.3)
+    font_size = 12
+    font_family = JetBrains Mono
+    position = -80, 85
+    halign = right
+    valign = bottom
+}

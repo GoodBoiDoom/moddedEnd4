@@ -1,0 +1,61 @@
+[2026-02-04 02:28:47] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:28:58] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:00] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:00] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:00] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:00] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:01] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:01] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:01] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:01] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:01] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:02] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:02] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:02] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:03] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:03] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:03] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:04] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:26] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:26] [INFO] Starting wallpaper changer
+[2026-02-04 02:29:27] [INFO] Starting wallpaper changer
+[2026-02-04 02:31:10] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:31:35] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:32:38] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:32:58] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:32:58] [DEBUG] All dependencies available
+[2026-02-04 02:32:58] [DEBUG] Loaded wallpaper state: mode=DISTINCT
+[2026-02-04 02:32:58] [DEBUG] Cleaning up old socket connections
+[2026-02-04 02:32:58] [DEBUG] Hyprpaper is already running
+[2026-02-04 02:32:58] [INFO] Applying wallpapers based on current configuration
+[2026-02-04 02:32:59] [DEBUG] Internal monitor (eDP-1) detected
+[2026-02-04 02:32:59] [DEBUG] External monitor (HDMI-A-1) detected
+[2026-02-04 02:32:59] [INFO] Dual monitor configuration detected
+[2026-02-04 02:32:59] [INFO] Applying distinct wallpapers
+[2026-02-04 02:32:59] [DEBUG] Setting wallpaper for eDP-1: /home/om/Pictures/wallpapers/gyro.jpg
+[2026-02-04 02:32:59] [DEBUG] Successfully set wallpaper for eDP-1
+[2026-02-04 02:32:59] [DEBUG] Setting wallpaper for HDMI-A-1: /home/om/Pictures/wallpapers/wallpaper.jpg
+[2026-02-04 02:32:59] [DEBUG] Successfully set wallpaper for HDMI-A-1
+[2026-02-04 02:32:59] [INFO] Starting monitor change detection
+[2026-02-04 02:33:19] [INFO] Starting wallpaper changer
+[2026-02-04 02:33:19] [DEBUG] All dependencies available
+[2026-02-04 02:33:23] [INFO] User selected right monitor only
+[2026-02-04 02:33:59] [DEBUG] Selected image: /run/media/om/F2B4ADDBB4ADA299/Users/Shlok Basak/Downloads/wallpaperflare.com_wallpaper (42).jpg
+[2026-02-04 02:33:59] [DEBUG] Wallpaper state saved
+[2026-02-04 02:33:59] [DEBUG] Setting wallpaper for HDMI-A-1: /run/media/om/F2B4ADDBB4ADA299/Users/Shlok Basak/Downloads/wallpaperflare.com_wallpaper (42).jpg
+[2026-02-04 02:33:59] [INFO] Successfully set wallpaper for HDMI-A-1
+[2026-02-04 02:33:59] [INFO] Wallpaper change completed successfully
+[2026-02-04 02:34:36] [INFO] Starting wallpaper changer
+[2026-02-04 02:34:36] [DEBUG] All dependencies available
+[2026-02-04 02:34:37] [INFO] User selected right monitor only
+[2026-02-04 02:34:48] [DEBUG] Selected image: /home/om/Pictures/wallpapers/wallpaperflare.com_wallpaper (42).jpg
+[2026-02-04 02:34:48] [DEBUG] Wallpaper state saved
+[2026-02-04 02:34:48] [DEBUG] Setting wallpaper for HDMI-A-1: /home/om/Pictures/wallpapers/wallpaperflare.com_wallpaper (42).jpg
+[2026-02-04 02:34:48] [INFO] Successfully set wallpaper for HDMI-A-1
+[2026-02-04 02:34:48] [INFO] Wallpaper change completed successfully
+[2026-02-04 02:35:22] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:36:08] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:53:12] [INFO] Starting wallpaper monitor daemon
+[2026-02-04 02:53:21] [INFO] Starting wallpaper changer
+[2026-02-04 02:53:22] [INFO] Starting wallpaper changer
+[2026-02-04 02:53:32] [INFO] Starting wallpaper changer

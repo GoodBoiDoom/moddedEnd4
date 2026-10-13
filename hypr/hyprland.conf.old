@@ -1,0 +1,16 @@
+
+#  HYPRLAND CONFIG
+#  Optimized for Intel Iris Xe  Graphics
+#  Maintainer: theGoodBoi
+#  Modular Configuration
+
+# Source all module configurations
+source = ~/.config/hypr/modules/env.conf
+source = ~/.config/hypr/modules/monitor.conf
+source = ~/.config/hypr/modules/startup.conf
+source = ~/.config/hypr/modules/input.conf
+source = ~/.config/hypr/modules/decoration.conf
+source = ~/.config/hypr/modules/animations.conf
+source = ~/.config/hypr/modules/performance.conf
+source = ~/.config/hypr/modules/keybinds.conf
+source = ~/.config/hypr/modules/idle.conf

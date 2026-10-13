@@ -1,0 +1,225 @@
+# ============================================
+# HYPRLAND ANIMATION CONFIGURATIONS
+# ============================================
+# Copy the animation block you like into your hyprland.conf
+# Test changes with: hyprctl reload
+
+
+# ============================================
+# YOUR CURRENT CONFIG (SMOOTHED)
+# ============================================
+
+#default
+animations {
+    enabled = yes
+
+    bezier = wind, 0.05, 0.9, 0.1, 1.05
+    bezier = winIn, 0.1, 1.1, 0.1, 1.1
+    bezier = winOut, 0.3, -0.3, 0, 1
+    bezier = linear, 1, 1, 1, 1
+
+    animation = windows, 1, 1, wind, slide
+    animation = windowsIn, 1, 1, winIn, slide
+    animation = windowsOut, 1, 1, winOut, slide
+    animation = workspaces, 1, 2.5, wind
+    animation = border, 1, 1, linear
+    animation = borderangle, 1, 30, linear, loop
+    animation = fade, 1, 4, default
+}
+
+# Increased durations for smoother motion
+animations {
+    enabled = yes
+    bezier = wind, 0.05, 0.9, 0.1, 1.05
+    bezier = winIn, 0.1, 1.1, 0.1, 1.1
+    bezier = winOut, 0.3, -0.3, 0, 1
+    bezier = linear, 1, 1, 1, 1
+    
+    animation = windows, 1, 4, wind, slide         # increased from 1 to 4
+    animation = windowsIn, 1, 4, winIn, slide      # increased from 1 to 4
+    animation = windowsOut, 1, 3, winOut, slide    # increased from 1 to 3
+    animation = workspaces, 1, 5, wind             # increased from 2.5 to 5
+    animation = border, 1, 10, linear              # increased from 1 to 10
+    animation = borderangle, 1, 50, linear, loop   # increased from 30 to 50
+    animation = fade, 1, 7, default                # increased from 4 to 7
+}
+
+
+# ============================================
+# PRESET 1: BUTTERY SMOOTH (macOS-like)
+# ============================================
+# Smooth, elegant animations with subtle overshot
+# Best for: Users who want polished, professional feel
+animations {
+    enabled = yes
+    bezier = smoothOut, 0.36, 0, 0.66, -0.56
+    bezier = smoothIn, 0.25, 1, 0.5, 1
+    bezier = overshot, 0.05, 0.9, 0.1, 1.1
+    
+    animation = windows, 1, 5, overshot, slide
+    animation = windowsOut, 1, 4, smoothOut, slide
+    animation = border, 1, 10, default
+    animation = fade, 1, 8, smoothIn
+    animation = fadeDim, 1, 8, smoothIn
+    animation = workspaces, 1, 6, overshot, slidevert
+}
+
+
+# ============================================
+# PRESET 2: SNAPPY & RESPONSIVE
+# ============================================
+# Quick, efficient animations with popin effect
+# Best for: Fast-paced workflows, productivity focus
+animations {
+    enabled = yes
+    bezier = fast, 0.1, 0.9, 0.1, 1.0
+    bezier = quick, 0.23, 1, 0.32, 1
+    
+    animation = windows, 1, 3, quick, popin 80%
+    animation = windowsOut, 1, 2, fast, popin 80%
+    animation = border, 1, 5, default
+    animation = fade, 1, 4, quick
+    animation = workspaces, 1, 4, quick, slide
+}
+
+
+# ============================================
+# PRESET 3: ELEGANT & FLOATY
+# ============================================
+# Slow, graceful animations with extended easing
+# Best for: Aesthetic-focused setups, presentations
+animations {
+    enabled = yes
+    bezier = easeOutQuart, 0.25, 1, 0.5, 1
+    bezier = easeInOutCirc, 0.85, 0, 0.15, 1
+    bezier = easeOutExpo, 0.16, 1, 0.3, 1
+    
+    animation = windows, 1, 6, easeOutExpo, popin 60%
+    animation = windowsMove, 1, 5, easeOutQuart, slide
+    animation = fade, 1, 8, easeOutQuart
+    animation = workspaces, 1, 7, easeOutExpo, slide
+    animation = specialWorkspace, 1, 6, easeInOutCirc, slidevert
+}
+
+
+# ============================================
+# PRESET 4: MINIMAL MOTION
+# ============================================
+# Subtle animations for reduced motion preference
+# Best for: Performance optimization, motion sensitivity
+animations {
+    enabled = yes
+    bezier = simple, 0.5, 0, 0.5, 1
+    
+    animation = windows, 1, 2, simple, fade
+    animation = windowsOut, 1, 2, simple, fade
+    animation = border, 1, 3, simple
+    animation = fade, 1, 3, simple
+    animation = workspaces, 1, 3, simple, fade
+}
+
+
+# ============================================
+# PRESET 5: BOUNCY & PLAYFUL
+# ============================================
+# Fun, energetic animations with spring physics
+# Best for: Casual setups, personal machines
+animations {
+    enabled = yes
+    bezier = spring, 0.68, -0.55, 0.265, 1.55
+    bezier = bounce, 0.34, 1.56, 0.64, 1
+    
+    animation = windows, 1, 5, spring, popin 70%
+    animation = windowsOut, 1, 3, default, popin 80%
+    animation = border, 1, 8, spring
+    animation = borderangle, 1, 40, spring, loop
+    animation = fade, 1, 5, bounce
+    animation = workspaces, 1, 5, spring, slide
+}
+
+
+# ============================================
+# PRESET 6: ULTRA SMOOTH (High Duration)
+# ============================================
+# Very slow, cinematic animations
+# Best for: Showing off, video recordings, demos
+animations {
+    enabled = yes
+    bezier = ultra, 0.16, 1, 0.3, 1
+    bezier = silk, 0.25, 0.46, 0.45, 0.94
+    
+    animation = windows, 1, 8, ultra, slide
+    animation = windowsOut, 1, 6, silk, slide
+    animation = border, 1, 15, default
+    animation = fade, 1, 10, ultra
+    animation = workspaces, 1, 10, ultra, slidevert
+}
+
+
+# ============================================
+# PRESET 7: GAMING/PERFORMANCE
+# ============================================
+# Very fast animations, minimal overhead
+# Best for: Gaming, low-spec hardware
+animations {
+    enabled = yes
+    bezier = gaming, 0.4, 0, 0.2, 1
+    
+    animation = windows, 1, 2, gaming, slide
+    animation = windowsOut, 1, 1.5, gaming, slide
+    animation = border, 1, 3, gaming
+    animation = fade, 1, 2, gaming
+    animation = workspaces, 1, 2.5, gaming, slide
+}
+
+
+# ============================================
+# UNDERSTANDING BEZIER CURVES
+# ============================================
+# bezier = name, x1, y1, x2, y2
+#
+# (x1, y1) = Start control point (acceleration)
+# (x2, y2) = End control point (deceleration)
+#
+# Common patterns:
+# - Ease out:  0.16, 1, 0.3, 1      (fast start, slow end)
+# - Ease in:   0.7, 0, 0.84, 0      (slow start, fast end)
+# - Linear:    1, 1, 1, 1            (constant speed)
+# - Overshot:  0.05, 0.9, 0.1, 1.1  (bounces past then settles)
+# - Spring:    0.68, -0.55, 0.265, 1.55 (bouncy spring effect)
+
+
+# ============================================
+# ANIMATION PARAMETERS EXPLAINED
+# ============================================
+# animation = NAME, ENABLED, DURATION, CURVE, STYLE
+#
+# NAME options:
+#   - windows, windowsIn, windowsOut, windowsMove
+#   - workspaces, specialWorkspace
+#   - fade, fadeDim, fadeSwitch, fadeShadow, fadeIn
+#   - border, borderangle
+#
+# ENABLED: 0 = off, 1 = on
+#
+# DURATION: Time in deciseconds (10 = 1 second)
+#   - 1-3:   Very fast/snappy
+#   - 4-7:   Smooth/balanced
+#   - 8-15:  Slow/cinematic
+#
+# STYLE options:
+#   - slide      (default sliding)
+#   - slidevert  (vertical slide)
+#   - popin X%   (scale from X% size)
+#   - fade       (opacity transition)
+#
+# CURVE: Your bezier curve name or 'default'
+
+
+# ============================================
+# QUICK TESTING COMMANDS
+# ============================================
+# Reload config:     hyprctl reload
+# Test workspace:    hyprctl dispatch workspace 2
+# Test window:       hyprctl dispatch exec kitty
+# Monitor settings:  hyprctl animations
