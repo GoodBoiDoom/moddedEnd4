@@ -1,0 +1,3 @@
+function qv --wraps=' setsid env QML2_IMPORT_PATH=/home/om/.local/lib/qt6/qml qs -p /home/om/Persona-Quickshell/ > /tmp/opencode/qs.log 2>&1 < /dev/null & sleep 5; head -15 /tmp/opencode/qs.log; pgrep -a qs | head -3' --description 'alias qv= setsid env QML2_IMPORT_PATH=/home/om/.local/lib/qt6/qml qs -p /home/om/Persona-Quickshell/ > /tmp/opencode/qs.log 2>&1 < /dev/null & sleep 5; head -15 /tmp/opencode/qs.log; pgrep -a qs | head -3'
+     setsid env QML2_IMPORT_PATH=/home/om/.local/lib/qt6/qml qs -p /home/om/Persona-Quickshell/ > /tmp/opencode/qs.log 2>&1 < /dev/null & sleep 5; head -15 /tmp/opencode/qs.log; pgrep -a qs | head -3 $argv
+end
